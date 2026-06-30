@@ -1,0 +1,11 @@
+# Agents
+.agents/
+.claude/
+
+# OS
+.DS_Store
+
+# IDE
+
+.idea/
+.vscode/
