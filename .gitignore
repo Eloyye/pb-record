@@ -1,8 +1,15 @@
+# Python
+
+**/.venv/
+**/__pycache__/
+
 # Agents
+
 .agents/
 .claude/
 
 # OS
+
 .DS_Store
 
 # IDE
