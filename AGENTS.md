@@ -11,3 +11,7 @@ Default label vocabulary (`needs-triage`, `needs-info`, `ready-for-agent`, `read
 ### Domain docs
 
 Single-context layout — `CONTEXT.md` + `docs/adr/` at the repo root. See `docs/agents/domain.md`.
+
+## Quality checks
+
+Toolchain and the pre-commit gate are defined in [ADR-0006](docs/adr/0006-toolchain-and-quality-gates.md): `uv` + `ruff` + `ty` (pinned) + `pytest` for `apps/api`; `pnpm` + Vite + `oxlint` + `oxfmt` + `vitest` for `apps/web`; enforced by `lefthook`, mirrored in CI. Run `just check` before proposing changes. Do not reintroduce ESLint / Prettier / mypy / Husky — the Rust toolchain is deliberate. Configs are created at scaffold time.
